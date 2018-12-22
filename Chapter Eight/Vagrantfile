@@ -1,0 +1,21 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+$provisionScript = <<-SCRIPT
+sed -i 's/console=tty0 console=ttyS0,115200n8//g' /boot/grub2/grub.cfg
+systemctl restart sshd
+SCRIPT
+
+Vagrant.configure("2") do |config|
+
+ config.vm.define "centos7" do |centos7|
+   centos7.vm.box = "centos/7"
+   centos7.vm.provision "shell",
+   inline: $provisionScript
+ end
+
+ config.vm.define "ubuntu1804" do |ubuntu1804|
+   ubuntu1804.vm.box = "ubuntu/bionic64"
+ end
+
+end

@@ -1,0 +1,40 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define "centos1" do |centos1|
+    centos1.vm.box = "centos/7"
+    centos1.vm.network "private_network", ip: "192.168.33.10"
+    centos1.vm.hostname = "centos1"
+    centos1.vm.provider "virtualbox" do |centos1p|
+      centos1p.memory = 4096
+      centos1p.cpus = 2
+    end
+  end
+
+  config.vm.define "centos2" do |centos2|
+    centos2.vm.box = "centos/7"
+    centos2.vm.network "private_network", ip: "192.168.33.11"
+    centos2.vm.hostname = "centos2"
+  end
+
+  config.vm.define "debian1" do |debian1|
+    debian1.vm.box = "debian/stretch64"
+    debian1.vm.network "private_network", ip: "192.168.33.12" 
+    debian1.vm.hostname = "debian1"
+    debian1.vm.provider "virtualbox" do |debian1p|
+      debian1p.cpus = 1
+    end
+  end
+
+  config.vm.define "debian2" do |debian2|
+    debian2.vm.box = "debian/stretch64"
+    debian2.vm.network "private_network", ip: "192.168.33.13"
+    debian2.vm.hostname = "debian2"
+    debian2.vm.provider "virtualbox" do |debian2p|
+      debian2p.cpus = 1
+    end
+  end
+
+end

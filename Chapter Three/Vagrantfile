@@ -25,4 +25,9 @@ Vagrant.configure("2") do |config|
    centos2.vm.hostname = "centos2"
  end
 
+ config.vm.define "ubuntu1" do |ubuntu1|
+   ubuntu1.vm.box = "ubuntu/bionic64"
+   ubuntu1.vm.hostname = "ubuntu1"
+ end
+
 end

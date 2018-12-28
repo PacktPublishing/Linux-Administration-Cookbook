@@ -5,6 +5,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "centos1" do |centos1|
     centos1.vm.box = "centos/7"
+    centos1.vm.box_version = "1804.02"
     centos1.vm.provider "virtualbox" do |vbcustom|
 
       unless File.exist?('centos1.additional.vdi')

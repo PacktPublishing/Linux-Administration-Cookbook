@@ -5,14 +5,17 @@ Vagrant.configure("2") do |config|
 
  config.vm.define "centos7" do |centos7|
    centos7.vm.box = "centos/7"
+   centos7.vm.box_version = "1804.02"
  end
 
  config.vm.define "debian9" do |debian9|
    debian9.vm.box = "debian/stretch64"
+   debian9.vm.box_version = "9.5.0"
  end
 
  config.vm.define "ubuntu1804" do |ubuntu1804|
    ubuntu1804.vm.box = "ubuntu/bionic64"
+   ubuntu1804.vm.box_version = "20180927.0.0"
  end
 
 end

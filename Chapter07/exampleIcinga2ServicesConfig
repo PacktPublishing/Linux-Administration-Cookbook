@@ -1,0 +1,27 @@
+apply Service "ping4" {
+  check_command = "ping4"
+  assign where host.address
+}
+
+apply Service "ssh" {
+  check_command = "ssh"
+  assign where host.vars.os == "Linux"
+}
+
+apply Service "disk" {
+  check_command = "disk"
+  command_endpoint = host.vars.client_endpoint
+  assign where host.vars.client_endpoint
+}
+
+apply Service "icinga" {
+  check_command = "icinga"
+  command_endpoint = host.vars.client_endpoint
+  assign where host.vars.client_endpoint
+}
+
+apply Service "ntp_time" {
+  check_command = "ntp_time"
+  command_endpoint = host.vars.client_endpoint
+  assign where host.vars.client_endpoint
+}

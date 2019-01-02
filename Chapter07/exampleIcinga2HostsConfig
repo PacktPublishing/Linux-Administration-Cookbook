@@ -1,0 +1,6 @@
+object Host "debian2" {
+  check_command = "hostalive"
+  address = "192.168.33.13"
+  vars.client_endpoint = name
+  vars.os = "Linux"
+}

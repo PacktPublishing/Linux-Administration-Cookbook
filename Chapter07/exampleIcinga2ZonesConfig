@@ -1,0 +1,8 @@
+object Endpoint "debian2" {
+  host = "192.168.33.13"
+}
+
+object Zone "debian2" {
+  endpoints = [ "debian2" ]
+  parent = "master"
+}

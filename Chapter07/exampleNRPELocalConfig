@@ -1,0 +1,5 @@
+command[check_client_load]=/usr/lib/nagios/plugins/check_load -w 5.0,4.0,3.0 -c 10.0,6.0,4.0
+command[check_client_users]=/usr/lib/nagios/plugins/check_users -w 20 -c 50
+command[check_client_disk]=/usr/lib/nagios/plugins/check_disk -w 20% -c 10% -p /
+command[check_client_swap]=/usr/lib/nagios/plugins/check_swap -w 20 -c 10
+command[check_client_procs]=/usr/lib/nagios/plugins/check_procs -w 250 -c 400 -s RSZDT

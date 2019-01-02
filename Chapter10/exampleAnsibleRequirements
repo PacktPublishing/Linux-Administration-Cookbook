@@ -1,0 +1,4 @@
+---
+- name: geerlingguy.java
+- name: geerlingguy.docker
+- name: geerlingguy.apache

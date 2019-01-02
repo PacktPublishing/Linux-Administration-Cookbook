@@ -1,0 +1,21 @@
+{
+
+  "builders":[
+  {
+    "type": "docker",
+    "image": "nginx",
+    "commit": true,
+    "pull": true,
+    "changes": [
+      "LABEL custom=true",
+      "EXPOSE 443"
+    ]
+  }],
+
+  "provisioners":[
+  {
+    "type": "shell",
+    "inline": ["echo 'Bring back Black Books!'","apt remove nginx -y"]
+  }]
+
+}

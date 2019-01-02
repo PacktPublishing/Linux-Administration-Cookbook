@@ -1,0 +1,6 @@
+<VirtualHost 127.0.0.1:80>
+  ServerAdmin thebestsysadmin@example.com
+  DocumentRoot "/var/www/god-to-marvin/"
+  ServerName 127.0.0.1
+  ServerAlias 127.0.0.1
+</VirtualHost>

@@ -1,0 +1,8 @@
+[Unit]
+Description=Start python web server after a pause
+
+[Timer]
+OnBootSec=20s
+
+[Install]
+WantedBy=timers.target

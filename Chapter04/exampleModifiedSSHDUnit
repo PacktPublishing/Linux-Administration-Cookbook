@@ -1,0 +1,9 @@
+[Unit]
+Description=OpenSSH server daemon slightly modified
+Documentation=man:ssh-additional
+Requires=sshd-keygen.service
+[Service]
+Environment=OPTIONS="-u0"
+ExecStart=
+ExecStart=/usr/sbin/sshd -4 -D $OPTIONS
+RestartSec=10s

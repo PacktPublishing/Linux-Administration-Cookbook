@@ -1,0 +1,8 @@
+[Unit]
+Description=Python Web Server Example
+
+[Service]
+ExecStart=/usr/bin/python2.7 -m SimpleHTTPServer
+
+[Install]
+WantedBy=multi-user.target

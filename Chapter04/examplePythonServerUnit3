@@ -1,0 +1,10 @@
+[Unit]
+Description=Python Web Server Example
+Documentation=man:python(1)
+ConditionFileNotEmpty=/var/www/html/index.html
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/sysconfig/pythonWebServer
+ExecStart=/usr/bin/python2.7 -m SimpleHTTPServer $PORT
+WorkingDirectory=/var/www/html/

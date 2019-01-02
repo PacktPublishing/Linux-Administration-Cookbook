@@ -4,7 +4,7 @@
 
 This is the code repository for [Linux Administration Cookbook](https://www.packtpub.com/virtualization-and-cloud/linux-administration-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781789342529 ), published by Packt.
 
-**Insightful recipes to work with system administration tasks on Linux.**
+**Insightful recipes to work with system administration tasks on Linux**
 
 ## What is this book about?
 Linux is one of the most widely used operating systems among system administrators,and even modern application and server development is heavily reliant on the Linux platform.

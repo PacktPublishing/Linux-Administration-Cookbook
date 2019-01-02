@@ -1,0 +1,11 @@
+FROM alpine
+
+MAINTAINER Your Deity of Choice
+
+RUN apk add busybox-extras
+RUN touch index.html
+RUN echo "I really hated reading Shakespeare in school." > index.html
+
+EXPOSE 8080/tcp
+
+CMD ["/usr/sbin/httpd", "-p8080", "-f"]

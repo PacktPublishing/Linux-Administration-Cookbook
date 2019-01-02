@@ -1,0 +1,17 @@
+Host * !CentOS2-V6
+IdentityFile ~/.ssh/id_ed25519
+Port 22
+
+Host CentOS2-V4
+Hostname 192.168.33.11
+User vagrant
+
+Host CentOS2-V6
+Hostname fe80::a00:27ff:fe56:c5a7%%eth1
+IdentityFile ~/.ssh/id_rsa
+Port 22
+User vagrant
+
+Host CentOS2-Hostname
+Hostname centos2
+User vagrant

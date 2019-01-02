@@ -1,0 +1,11 @@
+[Unit]
+Description=Mounting our logical volume as srv
+
+[Mount]
+What=/dev/mapper/VolGroup01-Home3
+Where=/srv
+Type=btrfs
+Options=defaults
+
+[Install]
+WantedBy=multi-user.target

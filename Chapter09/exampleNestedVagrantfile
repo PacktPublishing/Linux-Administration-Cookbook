@@ -1,0 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+$provisionScript = <<-SCRIPT
+apt install nginx -y
+SCRIPT
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define "debian8" do |debian8|
+    debian8.vm.box = "debian/jessie64"
+  debian8.vm.network "forwarded_port", guest: 80, host: 8080
+    debian8.vm.provision "shell",
+      inline: $provisionScript
+
+    debian8.vm.provider "libvirt" do |lv|
+      lv.driver = "qemu"
+      lv.memory = 256
+      lv.cpus = 1
+
+    end
+  end
+end
